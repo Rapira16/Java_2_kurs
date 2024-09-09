@@ -30,9 +30,16 @@ public class Car {
     }
 
     // Метод для вывода информации о машине
-    @Override
+
     public String toString() {
-        return "Car [model=" + model + ", license=" + license + ", color=" + color + ", year=" + year + "]";
+        return "Car: model=" + model + ", license=" + license + ", color=" + color + ", year=" + year + "]";
+    }
+
+    // Метод для вывода информации о машине
+
+    // Сеттер для изменения года выпуска (в задании геттер)
+    public void setYear(int year) {
+        this.year = year;
     }
 
     // Тестирование класса
@@ -44,5 +51,9 @@ public class Car {
         System.out.println(car1);
         System.out.println(car2);
         System.out.println(car3);
+
+        // Изменение года выпуска для car1
+        car1.setYear(1988);
+        System.out.println("After year update: " + car1);
     }
 }
