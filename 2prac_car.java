@@ -35,14 +35,47 @@ public class Car {
         return "Car: model=" + model + ", license=" + license + ", color=" + color + ", year=" + year + "]";
     }
 
-    // Метод для вывода информации о машине
+    public String getModel() {
+        return model;
+    }
 
-    // Сеттер для изменения года выпуска (в задании геттер)
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getLicense() {
+        return license;
+    }
+
+    public void setLicense(String license) {
+        this.license = license;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
     public void setYear(int year) {
         this.year = year;
     }
 
-    // Тестирование класса
+    public int calculateAge() {
+        int currentYear = 2024;
+        return currentYear - year;
+    }
+}
+
+// new file
+
+public class Main {
     public static void main(String[] args) {
         Car car1 = new Car("UAZ", "x789ec38", "Green", 1976);
         Car car2 = new Car();
@@ -55,5 +88,7 @@ public class Car {
         // Изменение года выпуска для car1
         car1.setYear(1988);
         System.out.println("After year update: " + car1);
+
+        System.out.println("Car1 age: " + car1.calculateAge());
     }
 }
